@@ -1,0 +1,73 @@
+.testimony {
+	&-section {
+		background: url(../images/1024x768.png);
+		background-size: cover;
+	}
+
+	&-column {
+		@include media("<=tablet") {
+			width: 100%;
+		}
+	}
+
+	&-wrapper {
+
+		@include media("<=phone") {
+			padding: 110px 40px;
+		}
+		position: relative;
+		margin-right: -15px;
+		margin-left: -15px;
+		padding: 110px 60px;
+		background: rgba($color-5, .95);
+		text-align: center;
+
+		.quote {
+
+			@include media("<=phone") {
+				font-size: $default-font-size * 1.5;
+			}
+			margin-bottom: 25px;
+			color: #155353;
+			font-style: italic;
+			font-size: $default-font-size * 1.88;
+			font-family: $special-font;
+			line-height: 1.5em;
+
+			a {
+				color: $color-2;
+			}
+		}
+
+		.quote-name {
+			color: #1f7473;
+			font-weight: 600;
+			font-size: 18px;
+		}
+
+		&::before {
+			position: absolute;
+		    top: 0;
+		    left: 0;
+		    z-index: 99;
+		    width: 0;
+		    height: 0;
+		    border-width: 108px 108px 0 0;
+		    border-style: solid;
+		    border-color: $white rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+			content: "";
+		    line-height: 0;
+		}
+
+		&::after {
+		    position: absolute;
+		    top: 5px;
+		    left: 20px;
+		    z-index: 99;
+			color: $color-5;
+			content: "\e977";
+		    font-size: 36px;
+			font-family: "icomoon";
+		}
+	}
+}

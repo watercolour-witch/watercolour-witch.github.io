@@ -1,0 +1,93 @@
+/*
+   Color Schemes:
+   https://coolors.co/ed6a5a-f4f1bb-9bc1bc-e6ebe0-36c9c6
+   https://coolors.co/app/2d3142-bfc0c0-ffffff-f36843-4f5d75
+*/
+$color-1: #ed6a5a; // burnt-sienna (pale orange) color
+$color-2: #f4f1bb; // sidecar (yellow} color
+$color-3: #9bc1bc; // shadow-green color
+$color-4: #e6ebe0; // green-white color
+$color-5: #36c9c6; // turqoise color
+$color-6: #2d3142; // ebony clay (dark blue) color
+$color-7: #4f5d75; // blue bayoux (pale blue) color
+$color-8: #bfc0c0; // silver sand (grey) color
+$color-9: #f36843; // jaffa (dark orange) color
+
+$base-color: #282828;
+$white: #fff;
+
+/* Color Settings  */
+.color-1 {
+	color: $color-1;
+}
+
+.color-2 {
+	color: $color-2;
+}
+
+.color-3 {
+	color: $color-3;
+}
+
+.color-4 {
+	color: $color-4;
+}
+
+.color-5 {
+	color: $color-5;
+}
+
+.color-6 {
+	color: $color-6;
+}
+
+.color-7 {
+	color: $color-7;
+}
+
+.color-8 {
+	color: $color-8;
+}
+
+.color-9 {
+	color: $color-9;
+}
+/* -- */
+
+/* Background Color Settings */
+.color-1-bg {
+	background: $color-1;
+}
+
+.color-2-bg {
+	background: $color-2;
+}
+
+.color-3-bg {
+	background: $color-3;
+}
+
+.color-4-bg {
+	background: $color-4;
+}
+
+.color-5-bg {
+	background: $color-5;
+}
+
+.color-6-bg {
+	background: $color-6;
+}
+
+.color-7-bg {
+	background: $color-7;
+}
+
+.color-8-bg {
+	background: $color-8;
+}
+
+.color-9-bg {
+	background: $color-9;
+}
+/* -- */

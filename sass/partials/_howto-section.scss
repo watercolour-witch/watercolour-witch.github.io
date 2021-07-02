@@ -1,0 +1,335 @@
+.how-to {
+	&-section {
+		.circle-image img {
+			border: 5px solid #e0ddab;
+		}
+
+		&.transparent-image-background {
+			position: relative;
+			overflow: hidden;
+
+			.product-campaign-layout &::before {
+
+				@include media("<=desktop") {
+					left: 0;
+				}
+
+				@include media("<=tablet") {
+					top: 40%;
+					left: 25%;
+				}
+
+				@include media("<=414px") {
+					display: none;
+				}
+				position: absolute;
+				top: -60px;
+				left: 120px;
+				width: 682px;
+				height: 914px;
+				background: url(../images/watch-assets/gold-and-white-watches.png) left center no-repeat;
+				content: "";
+			}
+		}
+	}
+
+	&-title {
+		margin-bottom: 32px;
+
+		.product-campaign-layout & h3 {
+			margin-top: 10px;
+			font-weight: 700;
+			font-family: $body-font;
+		}
+
+		&::after {
+			display: block;
+			margin-top: 40px;
+			width: 60px;
+			height: 2px;
+			background: $base-color;
+			content: "";
+		}
+
+		&.color-1 {
+
+			&::after {
+				background: $color-1;
+			}
+
+		}
+
+		&.color-2 {
+
+			&::after {
+				background: $color-2;
+			}
+
+		}
+
+		&.color-3 {
+
+			&::after {
+				background: $color-3;
+			}
+
+		}
+
+		&.color-4 {
+
+			&::after {
+				background: $color-4;
+			}
+
+		}
+
+		&.color-4 {
+
+			&::after {
+				background: $color-4;
+			}
+
+		}
+	}
+}
+
+a.store-btn {
+	img {
+		@include transition(all, .4s);
+
+		@include media("<=320px") {
+			margin-bottom: 20px;
+		}
+	}
+
+	&:hover img {
+		opacity: .9;
+	}
+}
+
+.half-phone-mockup img {
+	@include media("<=desktop") {
+		float: right;
+	}
+
+	@include media("<=tablet") {
+		display: block;
+		float: none;
+		margin: 0 auto;
+	}
+
+	@include media("<=600px") {
+		width: 100%;
+	}
+}
+
+/* App Slider Setting */
+.app {
+	&-slider {
+
+		@include media(">600px", "<=tablet") {
+			padding: 0 160px;
+		}
+
+		@include media("<415px") {
+			padding: 0 20px;
+		}
+		padding: 0 80px;
+		text-align: center;
+
+		.slick-list {
+			margin: 0;
+		}
+	}
+
+	&-item {
+		.app-icon {
+
+			@include media("<=phone") {
+				font-size: 36px;
+			}
+			display: block;
+			padding-top: 35px;
+			color: #5d7e7a;
+			font-size: 48px;
+		}
+
+		&.slick-center .app-icon {
+			@include transition(all, .3s);
+
+			@include media("<=tablet") {
+				font-size: 82px;
+			}
+
+			@include media("<=phone") {
+				font-size: 70px;
+			}
+			padding-top: 0;
+			color: #425c59;
+			font-size: 90px;
+		}
+
+		.app-name {
+			@include transform(translateY(20px));
+
+			@include media("<=tablet") {
+				display: none;
+			}
+			display: block;
+			visibility: hidden;
+			margin-top: 20px;
+			color: #425c59;
+			font-weight: 600;
+			backface-visibility: hidden;
+		}
+
+		&.slick-center .app-name {
+			@include transform(translateY(0));
+			@include transition(transform, .5s);
+			visibility: visible;
+			transition-delay: .25s;
+		}
+	}
+}
+
+.slick-prev::before,
+.slick-next::before {
+    color: #425c59;
+    font-size: 80px;
+    font-family: 'icomoon';
+    line-height: 0;
+}
+
+.slick-prev,
+.slick-next {
+
+	@include media("<=phone") {
+		top: 0;
+	}
+	top: 7px;
+	width: 28px;
+	height: 80px;
+}
+
+.slick-prev {
+
+	@include media(">600px", "<=tablet") {
+		left: 120px;
+	}
+
+	@include media("<415px") {
+		left: 0;
+	}
+	left: 50px;
+	z-index: 2;
+	margin-top: 65px;
+
+	&::before {
+		content: '\f104';
+	}
+}
+
+.slick-next {
+
+	@include media(">600px", "<=tablet") {
+		right: 121px;
+	}
+
+	@include media("<415px") {
+		right: 0;
+	}
+	right: 57px;
+	z-index: 2;
+	margin-top: 65px;
+
+	&::before {
+		content: '\f105';
+	}
+}
+/* -- */
+
+/* Swipebox Setting (Lightbox jQuery) */
+.swipebox {
+	position: relative;
+	display: inline-block;
+
+	&::before {
+		@include transition(opacity, .5s ease);
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+		background: rgba($base-color, 0.4);
+		content: "";
+		opacity: 0;
+
+		.circle-image & {
+			@include border-top-radius(100%);
+			@include border-bottom-radius(100%);
+			top: 5px;
+			right: 5px;
+			bottom: 5px;
+			left: 5px;
+		}
+	}
+
+	&:hover::before {
+		opacity: 1;
+	}
+
+	&::after {
+	    @include border-top-radius(100%);
+		@include border-bottom-radius(100%);
+		@include transition(all, .4s cubic-bezier(0.175,.885,.32,1.275));
+	    @include transform(scale(0));
+		@include backface-visibility(visible);
+		position: absolute;
+		bottom: 41.5%;
+	    left: 41.5%;
+	    z-index: 3;
+	    display: block;
+	    width: 60px;
+	    height: 60px;
+	    background: $white;
+	    color: $color-1;
+		content: "\e037";
+	    text-align: center;
+	    font-size: 24px;
+		font-family: "icomoon";
+	    line-height: 60px;
+	}
+
+	&:hover::after {
+		@include transform(scale(1));
+		@include animation(pulseIcon .8s ease-out);
+		@include animation-fill-mode(forwards);
+	}
+}
+
+@include keyframes(pulseIcon) {
+	0% {
+		@include transform(scale(0));
+	}
+
+	50% {
+		@include transform(scale(1.1));
+		-webkit-box-shadow: 0 0 0 0 rgba(255,255,255,.4);
+		box-shadow: 0 0 0 0 rgba(255,255,255,.4);
+	}
+
+
+	100% {
+		@include transform(scale(1));
+		-webkit-box-shadow: 0 0 0 40px rgba(255,255,255,0);
+		box-shadow: 0 0 0 40px rgba(255,255,255,0);
+	}
+}
+
+.circle-image img {
+	@include media("<415px") {
+		width: 100%;
+	}
+}
+/* -- */

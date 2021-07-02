@@ -1,0 +1,1 @@
+$(document).ready(function(){var t=$(".bundle-list-filter");t.isotope({filter:"*",itemSelector:".bundle-filter",layoutMode:"fitRows"}),$(".filter-button a").click(function(){$(".filter-button .active").removeClass("active"),$(this).addClass("active");var e=$(this).attr("data-filter");return t.isotope({filter:e}),!1})});

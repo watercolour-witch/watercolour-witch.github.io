@@ -1,0 +1,128 @@
+.pricing-card {
+	padding-right: 15px;
+	padding-left: 15px;
+
+	&-item {
+		@include transform(translate3d(0,0,0));
+		@include transition(transform, .2s);
+
+		@include media("<=desktop") {
+			width: 33.12%;
+		}
+
+		@include media("<=tablet") {
+			width: 49.7%;
+		}
+
+		@include media("<=738px") {
+			display: inline-block;
+			padding: 10px 15px;
+			width: 49.2%;
+		}
+
+		@include media("<415px") {
+			width: 100%;
+		}
+		margin: 1px;
+		padding: 18px 30px;
+		width: 33.159%;
+		height: 312px;
+		background: $white;
+
+		.item {
+			&-name {
+				font-weight: 600;
+			}
+
+			&-desc {
+				font-size: 14px;
+			}
+
+			&-price-number-wrapper {
+				@include transition(width, .4s);
+
+				@include media("<=600px") {
+					width: 70%;
+				}
+				position: absolute;
+				left: 0;
+				width: 50%;
+				background: rgba(darken($white, 11%), .45);
+			}
+
+			&-price-number {
+				padding: 30px;
+				color: $color-5;
+				font-weight: 600;
+				font-size: 60px;
+
+				small {
+					vertical-align: super;
+					font-size: 30px;
+					font-family: inherit;
+				}
+			}
+
+			&-image {
+				@include transition(transform, .4s);
+
+				@include media("<=tablet") {
+					right: 10px;
+				}
+
+				@include media("<=600px") {
+					max-width: 50%;
+				}
+				position: absolute;
+				right: 30px;
+				bottom: 30px;
+				max-width: 200px;
+				backface-visibility: visible;
+
+			}
+
+		}
+
+		.btn-buy {
+			position: absolute;
+			bottom: 30px;
+			overflow: hidden;
+
+			&::before {
+				@include transition(all, .3s);
+				position: absolute;
+				left: -100px;
+				color: $white;
+				content: "\f07a";
+				font-size: 18px;
+				font-family: "icomoon";
+			}
+
+		}
+
+		&:hover {
+			@include transform(translateY(-4px));
+			z-index: 99;
+			box-shadow: 0 22px 43px rgba($base-color, .5);
+
+			.item-price-number-wrapper {
+				width: 100%;
+			}
+
+			.item-image {
+				@include transform(translateY(-10%) scale(0.95));
+			}
+
+			.btn-buy {
+				padding-right: 27px;
+				padding-left: 43px;
+
+				&::before {
+					left: 20px;
+				}
+			}
+
+		}
+
+	}
+}

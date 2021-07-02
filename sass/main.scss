@@ -1,0 +1,191 @@
+/* ========================================================= //
+   Template Name: Giman Landing Page
+   Template URI: http://worksofwisnu.com/theme-preview/giman
+   Description: Product and Deals HTML Landing Page Template
+   Author: xWisnux (Works of Wisnu)
+   Author URI: http://worksofwisnu.com
+   Version: 1.1
+// ========================================================= */
+
+/**
+ * Table of Contents:
+ *
+ * 1.0 - BOURBON & INCLUDE MEDIA
+ *
+ * 2.0 - HAMBURGERS
+ *
+ * 3.0 - GLOBAL
+ *   3.1 - COLOR
+ *   3.2 - GLOBAL STYLES
+ *   3.3 - MARGIN & PADDING STYLES
+ *   3.4 - FORMS
+ *	 3.5 - TABLES
+ *
+ * 4.0 - HEADER
+ *	 4.1  -  COUNTER SECTION
+ *
+ * 5.0 - HOW TO SECTION
+ *	 5.1  -  FEATURES SECTION
+ *   5.2  -  BUNDLE LIST
+ *
+ * 6.0 - TESTIMONY SECTION
+ *   6.1 BREAKOUT SECTION
+ *   6.2 TIMELINE
+ *
+ * 7.0 - PRICING SECTION
+ *
+ * 8.0 - GALLERY SECTION
+ *   8.1 - TEAM SECTION
+ *
+ * 9.0 - FOOTER SECTION
+ * -----------------------------------------------------------------------------
+ */
+
+ /**
+ * 1.0 BOURBON & INCLUDE MEDIA
+ * -----------------------------------------------------------------------------
+ */
+ @import "bourbon/bourbon";
+
+ @import "include-media/include-media";
+ // Define custom breakpoint
+ $breakpoints: (
+    phone: 375px,
+    tablet: 768px,
+    desktop: 1024px
+);
+
+
+ /**
+ * 2.0 HAMBURGERS
+ * -----------------------------------------------------------------------------
+ */
+ $hamburger-layer-width                     : 24px !default;
+ $hamburger-layer-height                    : 3px !default;
+ $hamburger-layer-spacing                   : 4px !default;
+ $hamburger-layer-color                     : #fff !default;
+ $hamburger-layer-border-radius             : 0 !default;
+ $hamburger-hover-opacity                   : 1 !default;
+
+// Types (Remove or comment out what you don't need)
+$hamburger-types: (
+// 3dx, // Remove the comment to use this hamburger type
+// 3dx-r, // Remove the comment to use this hamburger type
+//  3dy, // Remove the comment to use this hamburger type
+// 3dy-r, // Remove the comment to use this hamburger type
+//  arrow, // Remove the comment to use this hamburger type
+//  arrow-r, // Remove the comment to use this hamburger type
+//  arrowalt, // Remove the comment to use this hamburger type
+//  arrowalt-r, // Remove the comment to use this hamburger type
+//  boring, // Remove the comment to use this hamburger type
+//  collapse, // Remove the comment to use this hamburger type
+//  collapse-r, // Remove the comment to use this hamburger type
+//  elastic, // Remove the comment to use this hamburger type
+//  elastic-r, // Remove the comment to use this hamburger type
+//  emphatic, // Remove the comment to use this hamburger type
+//  emphatic-r, // Remove the comment to use this hamburger type
+//  slider, // Remove the comment to use this hamburger type
+//  slider-r, // Remove the comment to use this hamburger type
+    spring,
+//  spring-r, // Remove the comment to use this hamburger type
+//  stand, // Remove the comment to use this hamburger type
+//  stand-r, // Remove the comment to use this hamburger type
+//  spin, // Remove the comment to use this hamburger type
+//  spin-r, // Remove the comment to use this hamburger type
+//  squeeze, // Remove the comment to use this hamburger type
+//  vortex, // Remove the comment to use this hamburger type
+//  vortex-r // Remove the comment to use this hamburger type
+) !default;
+
+ @import "hamburgers/hamburgers";
+
+
+ /**
+ * 3.0 GLOBAL
+ * -----------------------------------------------------------------------------
+ */
+ /* 3.1 COLOR */
+ @import "partials/color";
+
+ /* 3.2 GLOBAL STYLE*/
+ @import "partials/global";
+
+ /* 3.3 MARGIN & PADDING SETTINGS */
+ @import "partials/margin-padding";
+
+ /* 3.4 FORMS */
+ @import "partials/forms";
+
+ /* 3.5 TABLES */
+ @import "partials/table";
+
+ /**
+ * 4.0 HEADER
+ * -----------------------------------------------------------------------------
+ */
+
+ @import "partials/header";
+
+ /** 4.1 COUNTER SECTION **/
+ @import "partials/counter";
+ /**
+
+
+ * 5.0 HOW TO SECTION
+ * -----------------------------------------------------------------------------
+ */
+
+ @import "partials/howto-section";
+
+ /** 5.1 FEATURES SECTION **/
+ @import "partials/features-section";
+
+ /** 5.2 BUNDLE LIST **/
+ @import "partials/bundle-list";
+
+
+ /**
+ * 6.0 TESTIMONY SECTION
+ * -----------------------------------------------------------------------------
+ */
+
+ @import "partials/testimony-section";
+
+ /** 6.1 BREAKOUT SECTION **/
+ @import "partials/breakout-section";
+
+ /** 6.2 TIMELINE **/
+ @import "partials/timeline";
+
+ /**
+ * 7.0 PRICING SECTION
+ * -----------------------------------------------------------------------------
+ */
+
+ @import "partials/pricing-section";
+
+
+ /**
+ * 8.0 GALLERY SECTION
+ * -----------------------------------------------------------------------------
+ */
+
+ @import "partials/gallery";
+
+ /** 8.1 TEAM SECTION **/
+ @import "partials/team-section";
+
+ /**
+ * 9.0 FOOTER SECTION
+ * -----------------------------------------------------------------------------
+ */
+
+ @import "partials/footer";
+
+
+ /**
+ * 10.0 THIRD PARTY APP/PLATFORM CUSTOM STYLE
+ * -----------------------------------------------------------------------------
+ */
+
+ @import "partials/third-party";

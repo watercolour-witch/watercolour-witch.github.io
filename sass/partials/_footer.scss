@@ -1,0 +1,176 @@
+/* Pre-Footer */
+.pre-footer-section {
+	padding: 0;
+
+	.two-blocks-col {
+		padding: 47px 40px 60px;
+	}
+}
+
+.footer-subscribe-wrapper {
+	background: url(../images/1024x768.png);
+	background-size: cover;
+
+	> * {
+		position: relative;
+	}
+
+	&::before {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		content: "";
+	}
+
+	&.color-1-bg::before {
+		background: rgba($color-1, .8);
+	}
+
+	&.color-2-bg::before {
+		background: rgba($color-2, .8);
+	}
+
+	&.color-3-bg::before {
+		background: rgba($color-3, .8);
+	}
+
+	&.color-4-bg::before {
+		background: rgba($color-4, .8);
+	}
+
+	&.color-5-bg::before {
+		background: rgba($color-5, .8);
+	}
+
+	&.color-6-bg::before {
+		background: rgba($color-6, .8);
+	}
+
+	&.color-7-bg::before {
+		background: rgba($color-7, .8);
+	}
+
+	&.color-8-bg::before {
+		background: rgba($color-8, .8);
+	}
+
+	&.color-9-bg::before {
+		background: rgba($color-9, .8);
+	}
+}
+
+// Banner Links Style
+.banner-link {
+
+	img {
+		@include transform(translate3d(0,0,0));
+		@include transition(transform, .2s);
+	}
+
+	&:hover img {
+		@include transform(translateY(-4px));
+		box-shadow: 0 22px 43px rgba($base-color, .5);
+	}
+
+}
+/* -- */
+
+/* Main Footer */
+.main-footer {
+	padding: 55px 0 60px;
+	background-color: #201e1c;
+	color: $white;
+}
+
+.footer{
+	&-title {
+		margin-bottom: 10px;
+		font-weight: 600;
+	}
+
+	&-links li {
+		margin-bottom: 10px;
+
+		a {
+			color: $white;
+
+			&:hover {
+				color: darken($white, 10.5%);
+			}
+		}
+	}
+
+	&-logo {
+		@include media("<=600px") {
+			margin-top: 45px;
+		}
+	}
+}
+
+.social-link {
+	margin-top: 26px;
+	margin-bottom: 26px;
+
+	li {
+		display: inline-block;
+		margin-right: 20px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		a {
+			color: $white;
+			font-size: 18px;
+
+			span {
+				@include transition(all, .3s);
+			}
+
+			&:hover .icon-instagram {
+				color: #e12f67;
+			}
+
+			&:hover .icon-facebook {
+				color: #3b5998;
+			}
+
+			&:hover .icon-twitter {
+				color: #55acee;
+			}
+
+			&:hover .icon-google-plus {
+				color: #cc3732;
+			}
+
+			&:hover .icon-youtube-play {
+				color: #cd201f;
+			}
+
+			&:hover .icon-dribbble {
+				color: #ea4c89;
+			}
+
+			&:hover .icon-skype {
+				color: #00aff0;
+			}
+
+			&:hover .icon-vimeo {
+				color: #1ab7ea;
+			}
+
+			&:hover .icon-linkedin {
+				color: #0077b5;
+			}
+		}
+	}
+}
+
+.copyright {
+	font-size: 12px;
+}
+/* -- */

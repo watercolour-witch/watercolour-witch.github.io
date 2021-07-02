@@ -1,0 +1,89 @@
+.timeline {
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+
+		@include media("<=414px") {
+			bottom: 7%;
+			left: 66px;
+		}
+		position: absolute;
+		top: 10px;
+		bottom: 8%;
+		left: 102px;
+		width: 2px;
+		background-color: #fff;
+		content: "";
+	}
+
+	> li {
+
+		@include media("<=414px") {
+			padding-left: 58px;
+		}
+		position: relative;
+		margin-bottom: 18px;
+		padding-left: 94px;
+
+		&::before, &::after {
+			display: table;
+			content: "";
+		}
+
+		&:first-child {
+			margin-top: 0 !important;
+		}
+	}
+
+	&-start {
+		margin-top: 40px;
+
+		.timeline-year {
+
+			@include media("<=414px") {
+				font-size: 18px;
+			}
+			position: absolute;
+			left: 0;
+			font-weight: 700;
+			font-size: 24px;
+		}
+
+		.timeline-circle {
+			color: $color-9;
+		}
+	}
+
+	&-circle {
+		position: absolute;
+		font-size: 20px;
+		line-height: 34px;
+	}
+
+	&-description {
+
+		@include media("<=414px") {
+			padding-left: 36px;
+		}
+		padding-left: 55px;
+
+		p {
+			margin-bottom: 5px;
+		}
+
+		strong {
+			font-size: 18px;
+		}
+	}
+
+	&-section {
+		position: relative;
+		overflow: hidden;
+		padding-bottom: 335px;
+		background: url(../images/watch-assets/all-watches.png);
+		background-position: center 150%;
+		background-repeat: no-repeat;
+
+	}
+}

@@ -1,0 +1,56 @@
+/*
+   Color Scheme 1
+   https://coolors.co/ed6a5a-f4f1bb-9bc1bc-e6ebe0-36c9c6
+*/
+$color-1: #ed6a5a; // burnt-sienna (pale orange) color
+$color-2: #f4f1bb; // sidecar (yellow} color
+$color-3: #9bc1bc; // shadow-green color
+$color-4: #e6ebe0; // green-white color
+$color-5: #36c9c6; // turqoise color
+
+$base-color: #282828;
+$white: #fff;
+
+/* Color Scheme */
+.color-1 {
+	color: $color-1;
+}
+
+.color-2 {
+	color: $color-2;
+}
+
+.color-3 {
+	color: $color-3;
+}
+
+.color-4 {
+	color: $color-4;
+}
+
+.color-5 {
+	color: $color-5
+}
+/* -- */
+
+/* Background Color */
+.color-1-bg {
+	background: $color-1;
+}
+
+.color-2-bg {
+	background: $color-2;
+}
+
+.color-3-bg {
+	background: $color-3;
+}
+
+.color-4-bg {
+	background: $color-4;
+}
+
+.color-5-bg {
+	background: $color-5
+}
+/* -- */

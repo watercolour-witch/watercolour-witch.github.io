@@ -1,0 +1,1 @@
+$(document).ready(function(){var Z=new Instafeed({get:"user",accessToken:"XXXXXXXX.YYYYYYY.ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ",userId:"XXXXXXXX",template:'<li class="image-large"><a href="{{link}}" target="blank"><img src="{{image}}" class="image-gallery-item image-left full-width" /></a></li>',limit:6,resolution:"standard_resolution",sortBy:"most-liked"});Z.run()});

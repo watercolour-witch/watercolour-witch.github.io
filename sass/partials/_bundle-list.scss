@@ -1,0 +1,226 @@
+.bundle {
+	&-list {
+		margin-top: 42px;
+
+		> div[class^="col-"] {
+			@include media("<=414px") {
+				float: none;
+				margin: 0 auto;
+				width: 80%;
+			}
+
+			@include media("<=phone") {
+				width: 100%;
+			}
+		}
+	}
+
+	&-item {
+		margin-bottom: 34px;
+
+		.bundle-filter & {
+			@include transform(translate3d(0,0,0));
+			@include transition(transform, .2s);
+			box-shadow: 0 1px 1px rgba($base-color, 0.1);
+
+			&:hover {
+				@include transform(translateY(-4px));
+				box-shadow: 0 11px 30px rgba($base-color, .25);
+			}
+		}
+
+		.bundle-thumb {
+			@include border-top-radius(16px);
+			@include border-bottom-radius(16px);
+			position: relative;
+			overflow: hidden;
+			margin-bottom: 6px;
+			box-shadow: 0 3px 0 rgba($color-8, .7);
+
+			img {
+				width: $full-width;
+			}
+
+			&::before {
+				@include transition(opacity, .5s ease);
+				@include border-top-radius(16px);
+				@include border-bottom-radius(16px);
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 2;
+				background: rgba($base-color, 0.4);
+				content: "";
+				opacity: 0;
+			}
+
+			&:hover::before {
+				opacity: 1;
+			}
+
+			&::after {
+			    @include border-top-radius(100%);
+				@include border-bottom-radius(100%);
+				@include transition(all, .4s cubic-bezier(0.175,.885,.32,1.275));
+			    @include transform(scale(0));
+				@include backface-visibility(visible);
+				position: absolute;
+				bottom: 38.5%;
+			    left: 38.5%;
+			    z-index: 3;
+			    display: block;
+			    width: 60px;
+			    height: 60px;
+			    background: $white;
+			    color: $color-9;
+				content: "\e000";
+			    text-align: center;
+			    font-size: 24px;
+				font-family: "icomoon";
+			    line-height: 60px;
+			}
+
+			&:hover::after {
+				@include transform(scale(1));
+				@include animation(pulseIcon .8s ease-out);
+				@include animation-fill-mode(forwards);
+			}
+		}
+
+		.bundle-title {
+			display: inline-block;
+			margin-bottom: 0;
+			padding-top: 1px;
+			width: 80%;
+			color: $base-color;
+			line-height: 1.5em;
+
+		}
+
+		.bundle-original-price {
+			float: right;
+			padding-top: 3px;
+			color: $color-9;
+			text-decoration: line-through;
+			font-weight: 600;
+		}
+	}
+
+	&-item-title {
+		margin-top: 0;
+		margin-bottom: 5px;
+	}
+
+	&-item-creator {
+		font-weight: 600;
+		font-size: 14px;
+	}
+
+	&-item-features {
+		padding-left: 20px;
+
+		li {
+			list-style: disc;
+			font-weight: 300;
+		}
+	}
+}
+/* -- */
+
+/* Bundle Filter */
+.filter-button {
+
+	text-align: center;
+	&-wrapper {
+
+		@include media("<=414px") {
+			margin-bottom: 40px;
+		}
+		margin-top: 49px;
+		margin-bottom: 66px;
+	}
+
+	li {
+		display: inline-block;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		a {
+
+			@include media("<=414px") {
+				@include border-left-radius(4px);
+				@include border-right-radius(4px);
+				padding-right: 15px;
+				padding-left: 15px;
+			}
+
+			@include media("<=phone") {
+				margin-bottom: 5px;
+			}
+			display: inline-block;
+			padding: 7px 30px;
+			background-color: lighten($base-color, 73.6%);
+			color: $base-color;
+			font-size: 14px;
+
+			&:hover {
+				background-color: lighten($base-color, 70%);
+			}
+
+			&.active {
+				background-color: $color-9;
+				color: $white;
+			}
+		}
+
+		&:first-child a {
+			@include border-left-radius(4px);
+		}
+
+		&:last-child a {
+			@include border-right-radius(4px);
+		}
+	}
+}
+
+
+.bundle-filter {
+	&-thumb {
+		position: relative;
+		overflow: hidden;
+
+		img {
+			width: $full-width;
+		}
+	}
+
+	&-content {
+		position: relative;
+		overflow: hidden;
+		padding: 13px 20px 20px;
+		background-color: #faf7f5;
+
+		.bundle-filter-description {
+			margin-bottom: 10px;
+			font-size: 14px;
+		}
+	}
+}
+
+h4.bundle-item-title {
+	margin-bottom: 12px;
+	font-weight: 700;
+
+	&::after {
+		display: block;
+		margin-top: 16px;
+		width: 100px;
+		height: 2px;
+		background: lighten($base-color, 73.6%);
+		content: "";
+	}
+}

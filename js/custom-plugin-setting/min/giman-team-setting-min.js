@@ -1,0 +1,1 @@
+$(document).ready(function(){var e=document.getElementsByClassName("team-description")[0].clientHeight;$(".team-photo img").css({height:e})});

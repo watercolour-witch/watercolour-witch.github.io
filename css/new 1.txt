@@ -1,0 +1,83 @@
+ez egy button 
+<a class="btn btn-default btn-orange all-caps">Join the Tribe now! </a>
+
+youtube link feliratkozásra: https://www.youtube.com/channel/UCug9Sgonz6UbWiaMpCwBnXA?sub_confirmation=1
+
+
+
+watch the video button
+<a href="https://vimeo.com/140362574" class="swipebox-video btn-video all-caps" ><span class="icon-film"></span> Watch the Video</a>
+
+Avalable on appstore and google play:
+ul class="inline-cta margin-top-60">
+
+								<li>
+									<a href="#0" class="store-btn"><img width="140" src="images/appstore-btn@2x.png" alt="Appstore"/></a>
+								</li>
+
+								<li>
+									<a href="#0" class="store-btn"><img width="140" src="images/playstore-btn@2x.png" alt="Playstore"/></a>
+								</li>
+								
+							
+beágyazott videó, nem csak olyan watch now button
+div class="embed-responsive embed-responsive-16by9 margin-top-50 margin-bottom-60" data-sr="enter bottom over 1s and move 80px wait 0.5s">
+								<iframe src="https://player.vimeo.com/video/145206942?color=1db48f&title=0&byline=0&portrait=0" width="780" height="438" allowfullscreen></iframe>
+							</div>
+							
+pricingra ugró hivatkozás button:
+<a href="#pricing" class="scroll-to btn btn-outline btn-green all-caps color-5">Learn more about my offerings</a>
+
+#creativity coloring alchemy színét itt tudod megírni
+
+rozsaszin #e77a9b  hover #ec366d
+
+okmányiroda +36 (1) 550-1858
+
+ class="btn btn-default btn-orange all-caps" href="http://www.meetup.com/coloringalchemy/" target="_blank"> Read more and apply to the next meetup </a>
+ 
+ 
+ BUTTON rózsaszín <a href="http://www.etsy.com/shop/essiestolmar" target="_blank" class="btn btn-subscribe btn-orange all-caps">Shop now</a>
+ 
+ 
+ -webkit-transition: -webkit-transform, 0.4s;
+  -moz-transition: -moz-transform, 0.4s;
+  transition: transform, 0.4s;
+  position: absolute;
+  right: 50px;
+  bottom: 30px;
+  max-width: 300px;
+  backface-visibility: visible;
+  
+  
+  
+  oldal szélessége 12 részre van felosztva
+  <div class="col-lg-6 col-md-6"   <-- itt pl 6/12 6/12 az arány mert col lg 6, a col mg 6 meg a tablet nézetre vonatkozik
+  
+  750 px széles legyenek a bloghoz a kép
+  
+  hot topic alatt 360 px a kép széle
+  
+  olvasnivaó kliens szerver architektúra
+  
+  red more színének változtatása --y main cssben #blog-content
+  
+  
+  
+  horoszkóp subscribe newsletter
+  
+  <label for="horoscope">What's your horoscope?</label>
+											<select id="horoscope">
+											  <option value="Capricorn">Capricorn</option>
+											  <option value="Aquarius">Aquarius</option>
+											  <option value="Pisces">Pisces</option>
+											  <option value="Aries">Aries</option>
+											  <option value="Taurus">Taurus</option>
+											  <option value="Gemini">Gemini</option>
+											  <option value="Cancer">Cancer</option>
+											  <option value="Leo">Leo</option>
+											  <option value="Virgo">Virgo</option>
+											  <option value="Libra">Libra</option>
+											  <option value="Scorpion">Scorpion</option>
+											  <option value="Saggitarius">Saggitarius</option>
+											</select>
